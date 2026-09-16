@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper,oneside]{book}
+
+% --- 1. GÓI THƯ VIỆN CƠ BẢN ---
+\usepackage[utf8]{vietnam}          % Hỗ trợ tiếng Việt
+\usepackage{amsmath,amssymb,amsthm} % Gói công thức toán học
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+\usepackage{hyperref}
+\usepackage{tcolorbox}              % Tạo khung đẹp cho định lý/bài toán
+
+% --- 2. CẤU HÌNH MÔI TRƯỜNG TOÁN HỌC ---
+\theoremstyle{definition}
+\newtheorem{theorem}{Định lý}[chapter]
+\newtheorem{lemma}{Mệnh đề}[chapter]
+\newtheorem{example}{Ví dụ}[chapter]
+\newtheorem{problem}{Bài toán}[chapter]
+
+% Khung làm nổi bật Nguyên lý Dirichlet
+\newtcolorbox{dirichletbox}[1][]{
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  title=#1
+}
+
+% --- 3. THÔNG TIN TÀI LIỆU ---
+\title{\textbf{ỨNG DỤNG CỦA NGUYÊN LÝ DIRICHLET\\TRONG CHỨNG MINH BẤT ĐẲNG THỨC}}
+\author{Dự án Biên soạn Toán học}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% --- 4. NAP CÁC CHƯƠNG NỘI DUNG ---
+\input{chapters/01-gioi-thieu.tex}
+\input{chapters/02-nguyen-ly-dirichlet.tex}
+
+\end{document}
